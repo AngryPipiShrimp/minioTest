@@ -1,2 +1,19 @@
 server:
-  port: 9001
+  port: 7001
+minio:
+  endpoint: http://192.168.0.56
+  port: 9002
+  accessKey: minio-dev
+  secretKey: minio-lsm
+  bucketName: minio-dve
+  secure: false
+spring:
+  servlet:
+    multipart:
+      #设置文件上传大小
+      max-file-size: 100MB
+      max-request-size: 150MB
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
